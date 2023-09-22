@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <script>
+        function fruits() {
+            this.name = 'fruit';
+            this.season = 'Winter';
+        }
+
+        function apple() {
+            fruits.call(this);
+        }
+
+        apple.prototype = Object.create(fruits.prototype);
+        const app = new apple();
+        document.write(app.name, app.season);
+        document.write(app.season);  
+    </script>
+</body>
+
+</html>

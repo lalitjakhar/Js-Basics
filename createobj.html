@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <script>
+        const people = {
+            printIntroduction: function () {
+                document.write(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+            }
+        };
+        const me = Object.create(people);
+        me.name = "Jonnndtt";
+        me.isHuman = true;
+        me.printIntroduction();  
+    </script>
+</body>
+
+</html>
