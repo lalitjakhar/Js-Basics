@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <script>
+        var website = {
+            name: "Gohash Include",
+            getName: function () {
+                return this.name;
+            }
+        }
+        var unboundGetName = website.getName;
+        var boundGetName = unboundGetName.bind(website);
+        document.writeln(boundGetName());  
+    </script>
+    <br>
+    <script>
+        this.name = "IT Team";
+        var website = {
+            name: "Gohash Include",
+            getName: function () { return this.name; }
+        };
+        document.writeln(website.getName());
+        var retrieveName = website.getName;
+
+        document.writeln(retrieveName());
+        var boundGetName = retrieveName.bind(website);
+
+        document.writeln(boundGetName());
+    </script>
+</body>
+
+</html>
